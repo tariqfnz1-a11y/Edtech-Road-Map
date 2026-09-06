@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EdTech Implementation Roadmap · Refined</title>
+    <title>EdTech Implementation Roadmap</title>
     <style>
         /* ───────── Reset & Variables ───────── */
         *,
@@ -830,7 +830,6 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-        /* ── Tooltips on metrics ── */
         .case-study .impact .metric .metric-tip {
             visibility: hidden;
             opacity: 0;
@@ -904,7 +903,6 @@
                 transition-duration: 0.01ms !important;
             }
         }
-        /* focus-visible for keyboard nav */
         .tracker-step:focus-visible,
         .stage-toggle:focus-visible,
         .btn:focus-visible,
@@ -1208,7 +1206,6 @@
                     <button class="btn btn-outline btn-sm" onclick="checkAllPlan(false)">⟲ Reset all</button>
                 </div>
 
-                <!-- Live region for screen readers -->
                 <div class="sr-only" aria-live="polite" id="planLiveRegion"></div>
             </div>
         </section>
@@ -1556,7 +1553,6 @@
                 verdictEl.textContent = verdict;
                 verdictEl.style.background = color;
                 verdictEl.style.color = textColor;
-                // live region
                 if (scoreLive) {
                     scoreLive.textContent = 'Scorecard updated: total ' + total + ' out of 100. ' + verdict;
                 }
@@ -1726,12 +1722,9 @@
             updateCase();
 
             // ── Init ──
-            // Set initial state: stage 1 open, tracker at 0, NO auto-scroll
             setActiveStage(0, false);
             updateScorecard();
             updatePlan();
-
-            // ── Keyboard: Space on tracker steps (already handled above) ──
 
             console.log('📘 School EdTech Roadmap — refined, accessible, and bug-free.');
         })();
