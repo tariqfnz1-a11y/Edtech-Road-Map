@@ -818,7 +818,6 @@
             align-items: center;
             position: relative;
             cursor: help;
-            border-radius: 8px;
         }
         .case-study .impact .metric .num {
             font-size: 1.6rem;
@@ -859,15 +858,10 @@
             border: 6px solid transparent;
             border-top-color: var(--gray-800);
         }
-        .case-study .impact .metric:hover .metric-tip,
-        .case-study .impact .metric:focus-visible .metric-tip {
+        .case-study .impact .metric:hover .metric-tip {
             visibility: visible;
             opacity: 1;
             transform: translateX(-50%) translateY(0);
-        }
-        .case-study .impact .metric:focus-visible {
-            outline: 3px solid var(--primary-lighter);
-            outline-offset: 3px;
         }
 
         /* ───────── Live region (sr-only) ───────── */
@@ -945,7 +939,7 @@
                 <span class="label">Diagnose</span>
                 <span class="tooltip">Weeks 1–2</span>
             </div>
-            <div class="tracker-line"></div>
+            <div class="tracker-line done"></div>
             <div class="tracker-step" data-stage="1" role="button" tabindex="0" aria-label="Stage 2: Select">
                 <span class="num">2</span>
                 <span class="label">Select</span>
@@ -995,7 +989,7 @@
                         <span class="icon open">▾</span>
                     </button>
                     <div class="stage-content open" id="stage-1">
-                        <p><strong>Begin with the school's problems — not with available technology.</strong></p>
+                        <p><strong>Begin with the school’s problems — not with available technology.</strong></p>
                         <p>Conduct a short audit of:</p>
                         <ul>
                             <li>Teacher administrative workload &amp; lesson‑planning time</li>
@@ -1006,7 +1000,7 @@
                             <li>Learning gaps not being identified quickly enough</li>
                         </ul>
                         <div class="quote-box">
-                            "Which part of your weekly work takes too much time but adds too little educational value?"
+                            “Which part of your weekly work takes too much time but adds too little educational value?”
                         </div>
                         <p><span class="badge badge-green">Key action</span> Ask every teacher that question. The answers determine your technology priorities.</p>
                     </div>
@@ -1115,7 +1109,7 @@
                             <li>A mechanism for teacher feedback</li>
                         </ul>
                         <div class="quote-box">
-                            "Which existing process or platform can we now simplify, combine or retire?"
+                            “Which existing process or platform can we now simplify, combine or retire?”
                         </div>
                         <p>This is the difference between <strong>digital accumulation</strong> and <strong>digital transformation</strong>.</p>
                     </div>
@@ -1159,33 +1153,33 @@
                     <div class="plan-phase">
                         <h4><span class="badge badge-blue">Days 1–15</span> Audit</h4>
                         <ul>
-                            <li><label><input type="checkbox" data-plan="audit-1" /> Map teacher workload &amp; systems</label></li>
-                            <li><label><input type="checkbox" data-plan="audit-2" /> Identify data flows &amp; pain points</label></li>
-                            <li><label><input type="checkbox" data-plan="audit-3" /> Survey teachers on time‑wasting tasks</label></li>
+                            <li><input type="checkbox" data-plan="audit-1" /> Map teacher workload &amp; systems</li>
+                            <li><input type="checkbox" data-plan="audit-2" /> Identify data flows &amp; pain points</li>
+                            <li><input type="checkbox" data-plan="audit-3" /> Survey teachers on time‑wasting tasks</li>
                         </ul>
                     </div>
                     <div class="plan-phase">
                         <h4><span class="badge badge-orange">Days 16–30</span> Prioritise</h4>
                         <ul>
-                            <li><label><input type="checkbox" data-plan="prior-1" /> Select one high‑value problem</label></li>
-                            <li><label><input type="checkbox" data-plan="prior-2" /> Define success indicators</label></li>
-                            <li><label><input type="checkbox" data-plan="prior-3" /> Get leadership buy‑in</label></li>
+                            <li><input type="checkbox" data-plan="prior-1" /> Select one high‑value problem</li>
+                            <li><input type="checkbox" data-plan="prior-2" /> Define success indicators</li>
+                            <li><input type="checkbox" data-plan="prior-3" /> Get leadership buy‑in</li>
                         </ul>
                     </div>
                     <div class="plan-phase">
                         <h4><span class="badge badge-green">Days 31–60</span> Pilot</h4>
                         <ul>
-                            <li><label><input type="checkbox" data-plan="pilot-1" /> Recruit pilot teacher group</label></li>
-                            <li><label><input type="checkbox" data-plan="pilot-2" /> Implement with support</label></li>
-                            <li><label><input type="checkbox" data-plan="pilot-3" /> Collect weekly feedback</label></li>
+                            <li><input type="checkbox" data-plan="pilot-1" /> Recruit pilot teacher group</li>
+                            <li><input type="checkbox" data-plan="pilot-2" /> Implement with support</li>
+                            <li><input type="checkbox" data-plan="pilot-3" /> Collect weekly feedback</li>
                         </ul>
                     </div>
                     <div class="plan-phase">
                         <h4><span class="badge badge-red">Days 61–75</span> Measure</h4>
                         <ul>
-                            <li><label><input type="checkbox" data-plan="meas-1" /> Compare workload &amp; efficiency</label></li>
-                            <li><label><input type="checkbox" data-plan="meas-2" /> Analyse student‑learning indicators</label></li>
-                            <li><label><input type="checkbox" data-plan="meas-3" /> Document before/after data</label></li>
+                            <li><input type="checkbox" data-plan="meas-1" /> Compare workload &amp; efficiency</li>
+                            <li><input type="checkbox" data-plan="meas-2" /> Analyse student‑learning indicators</li>
+                            <li><input type="checkbox" data-plan="meas-3" /> Document before/after data</li>
                         </ul>
                     </div>
                 </div>
@@ -1368,17 +1362,17 @@
                         </select>
                     </div>
                     <div class="impact" id="caseImpact">
-                        <div class="metric" tabindex="0" role="group" aria-label="Teacher Time Saved: Average time recovered per teacher">
+                        <div class="metric">
                             <span class="num" id="caseTime">-35</span>
                             <span class="label">Teacher Time Saved (min/week)</span>
                             <span class="metric-tip">Average time recovered per teacher</span>
                         </div>
-                        <div class="metric" tabindex="0" role="group" aria-label="Student Outcome Improvement: Improvement in attendance, grades, or engagement">
+                        <div class="metric">
                             <span class="num" id="caseOutcome">+12%</span>
                             <span class="label">Student Outcome Improvement</span>
                             <span class="metric-tip">Improvement in attendance, grades, or engagement</span>
                         </div>
-                        <div class="metric" tabindex="0" role="group" aria-label="Teacher Satisfaction: Self-reported job satisfaction increase">
+                        <div class="metric">
                             <span class="num" id="caseSatisfaction">+28%</span>
                             <span class="label">Teacher Satisfaction</span>
                             <span class="metric-tip">Self-reported job satisfaction increase</span>
@@ -1462,10 +1456,11 @@
 
             // Tracker clicks — close others, open target, scroll
             trackerSteps.forEach((step, idx) => {
-                step.addEventListener('click', function() {
+                const clickHandler = function(e) {
                     setActiveStage(idx, true);
                     step.focus();
-                });
+                };
+                step.addEventListener('click', clickHandler);
                 step.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
@@ -1475,54 +1470,57 @@
                 });
             });
 
-            // Sync the tracker nav to whichever stage is currently open,
-            // without forcing a stage open or closed itself.
-            function syncTrackerToOpenStage() {
-                let openIdx = -1;
-                stageToggles.forEach((b, i) => {
-                    const c = document.getElementById(b.dataset.target);
-                    if (c && c.classList.contains('open')) openIdx = i;
-                });
-                const target = openIdx === -1 ? activeStage : openIdx;
-                activeStage = target;
-                trackerSteps.forEach((el, i) => {
-                    el.classList.toggle('active', i === target && openIdx !== -1);
-                    el.classList.toggle('done', i < target);
-                });
-                trackerLines.forEach((el, i) => {
-                    el.classList.toggle('done', i < target);
-                });
-            }
-
-            // Stage toggle click — true accordion: clicking an open stage
-            // closes it; clicking a closed stage closes the others and
-            // opens it. The tracker nav is kept in sync either way, and
-            // gracefully falls back to marking the clicked stage as the
-            // reference point when nothing is left open.
-            stageToggles.forEach((btn, idx) => {
+            // Stage toggle — closes siblings, opens target, syncs tracker
+            stageToggles.forEach((btn) => {
                 btn.addEventListener('click', function() {
                     const target = document.getElementById(this.dataset.target);
                     const wasOpen = target.classList.contains('open');
+                    const idx = Array.from(stageToggles).indexOf(this);
 
-                    if (wasOpen) {
-                        // Collapse just this one; nothing else changes.
-                        target.classList.remove('open');
-                        this.setAttribute('aria-expanded', 'false');
-                        this.querySelector('.icon').classList.remove('open');
+                    // Close all stages
+                    stageToggles.forEach((b, i) => {
+                        const c = document.getElementById(b.dataset.target);
+                        const isTarget = i === idx;
+                        b.setAttribute('aria-expanded', isTarget ? 'true' : 'false');
+                        if (c) {
+                            c.classList.toggle('open', isTarget);
+                            b.querySelector('.icon').classList.toggle('open', isTarget);
+                        }
+                    });
+
+                    // If it was open and we closed it, we need to decide tracker state.
+                    // If we just closed the only open stage, set tracker to the previous stage or first.
+                    const anyOpen = Array.from(stageToggles).some((b, i) => {
+                        const c = document.getElementById(b.dataset.target);
+                        return c && c.classList.contains('open');
+                    });
+
+                    if (!anyOpen) {
+                        // Fallback: set tracker to the clicked stage, but keep it closed
+                        activeStage = idx;
+                        trackerSteps.forEach((el, i) => {
+                            el.classList.toggle('active', i === idx);
+                            el.classList.toggle('done', i < idx);
+                        });
+                        trackerLines.forEach((el, i) => {
+                            el.classList.toggle('done', i < idx);
+                        });
                     } else {
-                        // Close every stage, then open only this one.
+                        // Sync tracker with the open stage
                         stageToggles.forEach((b, i) => {
                             const c = document.getElementById(b.dataset.target);
-                            const isTarget = i === idx;
-                            b.setAttribute('aria-expanded', isTarget ? 'true' : 'false');
-                            if (c) {
-                                c.classList.toggle('open', isTarget);
-                                b.querySelector('.icon').classList.toggle('open', isTarget);
+                            if (c && c.classList.contains('open')) {
+                                activeStage = i;
                             }
                         });
+                        trackerSteps.forEach((el, i) => {
+                            el.classList.toggle('active', i === activeStage);
+                            el.classList.toggle('done', i < activeStage);
+                        });
+                        trackerLines.forEach((el, i) => {
+                            el.classList.toggle('done', i < activeStage);
+                        });
                     }
-
-                    syncTrackerToOpenStage();
                 });
             });
 
@@ -1558,21 +1556,14 @@
                 verdictEl.textContent = verdict;
                 verdictEl.style.background = color;
                 verdictEl.style.color = textColor;
-                return { total, verdict };
+                // live region
+                if (scoreLive) {
+                    scoreLive.textContent = 'Scorecard updated: total ' + total + ' out of 100. ' + verdict;
+                }
             }
 
-            // Visual update fires continuously while dragging (input),
-            // but the live-region announcement only fires once the user
-            // releases the slider (change) — otherwise a screen reader
-            // would announce dozens of updates per second mid-drag.
             scoreSliders.forEach((slider) => {
                 slider.addEventListener('input', updateScorecard);
-                slider.addEventListener('change', function() {
-                    const { total, verdict } = updateScorecard();
-                    if (scoreLive) {
-                        scoreLive.textContent = 'Scorecard updated: total ' + total + ' out of 100. ' + verdict;
-                    }
-                });
             });
 
             function resetScorecard() {
@@ -1582,8 +1573,7 @@
                     const display = slider.parentElement.querySelector('.val');
                     if (display) display.textContent = defaults[i];
                 });
-                const { total, verdict } = updateScorecard();
-                if (scoreLive) scoreLive.textContent = 'Scorecard reset to defaults: total ' + total + ' out of 100. ' + verdict;
+                updateScorecard();
             }
 
             function randomScorecard() {
@@ -1593,8 +1583,7 @@
                     const display = slider.parentElement.querySelector('.val');
                     if (display) display.textContent = val;
                 });
-                const { total, verdict } = updateScorecard();
-                if (scoreLive) scoreLive.textContent = 'Scorecard randomised: total ' + total + ' out of 100. ' + verdict;
+                updateScorecard();
             }
             window.resetScorecard = resetScorecard;
             window.randomScorecard = randomScorecard;
@@ -1741,6 +1730,8 @@
             setActiveStage(0, false);
             updateScorecard();
             updatePlan();
+
+            // ── Keyboard: Space on tracker steps (already handled above) ──
 
             console.log('📘 School EdTech Roadmap — refined, accessible, and bug-free.');
         })();
